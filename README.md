@@ -88,6 +88,14 @@ The model's edit runs as Python when the tests import `pagination.py`. The scrip
 
 Each run writes `runs/run-<time>.json`: settings, timestamps, every model turn (tool calls, finish reason, usage, request ID), every tool result except file contents, the test summaries before and after, the diff, token totals and the cost estimate. It contains no key and no account details. `"fixture": true` marks a run against a base URL other than the real API.
 
+## Recorded live run
+
+[![The agent's one-line fix and passing tests](demo/preview.png)](demo/agent-demo.mp4)
+
+On 8 November 2026, one live run used four requests to `glm-5.3-flash-unlocked`. The harness verified two failing tests before the edit and all five passing afterwards.
+
+The [23-second video](demo/agent-demo.mp4) replays the captured terminal output at a readable pace. The [live run report](demo/live-run.json) includes API request references, usage and a price-based cost estimate. The [full terminal transcript](demo/terminal.txt) is also available.
+
 ## Tests
 
 ```sh
